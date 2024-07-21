@@ -1,0 +1,31 @@
+/* 
+Original Program 
+
+
+0000010000000000 // load R0 <- Mem(R2 + 0)
+0000010001000001 // load R1 <- Mem(R2 + 1)
+0010000001010000 // Add R2 <- R0 + R1
+0001001010000000 // Store Mem(R1 + 0) <- R2
+0011000001010000 // sub R2 <- R0 - R1
+0100000001010000 // invert R2 <- !R0 
+0101000001010000 // logical shift left R2 <- R0<<R1 
+0110000001010000 // logical shift right R2 <- R0>>R1 
+0111000001010000 // AND R2<- R0 AND R1 
+1000000001010000 // OR R2<- R0 OR R1 
+1001000001010000 // SLT R2 <- 1 if R0 < R1 
+0010000000000000 // Add R0 <- R0 + R0
+1011000001000001 // BEQ branch to jump if R0=R1, PCnew= PC+2+offset<<1 = 28 => offset = 1
+1100000001000000 // BNE branch to jump if R0!=R1, PCnew= PC+2+offset<<1 = 28 => offset = 0
+1101000000000000 // J jump to the beginning address
+
+Simple test program:
+R0 gets an incrementing count that is also stored in mem[1]
+*/
+0000010000000000  // 0000: Load R0 <- Mem(R2+ 0) since R2=0 this puts 1 in R0
+0000010001000000  // 0002: Load the same in R1 (R1 will always contain 1)
+// location 8 (byte), 4 (word):
+0010000001010000  // 0004: R2= R0+ R1
+0001001010000000  // 0006: Mem[R1]=R2 (that is Mem[1]=R2
+0000001000000000  // 0008: R0=Mem[R1]
+1101000000000011  // 000A: Jump to location #4 (CPU will multiply by 2 and add 2)
+// no instruction at 000C, but PC will hang there while it processes jump
