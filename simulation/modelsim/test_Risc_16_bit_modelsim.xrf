@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/test_Risc_16_bit.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/Parameter.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/db/test_Risc_16_bit.cbx.xml
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/test.prog
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/test.data
+design_name = test_Risc_16_bit
+instance = comp, \clk~input , clk~input, test_Risc_16_bit, 1

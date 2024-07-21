@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/Risc_16_bit.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/Risc_16_bit.sdc
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/db/Risc_16_bit.cbx.xml
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/datapath_unit.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/instruction_memory.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/parameter.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/test.prog
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/gprs.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/alu_control.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/alu.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/data_memory.v
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/test.data
+source_file = 1, C:/Users/marka/OneDrive/Documents/CA project/control_unit.v
+design_name = Risc_16_bit
+instance = comp, \clk~input , clk~input, Risc_16_bit, 1
